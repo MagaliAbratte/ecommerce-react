@@ -1,3 +1,4 @@
+/* NAV BAR */
 .contenedor-navbar .flex-navbar{
   display: flex;
   flex-direction: row;
@@ -5,7 +6,6 @@
   width: 100%;
   height: 120px;
   box-shadow: 0px 7px 13px 0px rgba(219,219,219,1);
-  
 }
 
 .flex-logo-prod{
@@ -19,7 +19,7 @@
 }
 
 .productos-opciones .boton {
-  margin-top: 30px;
+  margin-top: 40px;
   margin-left: 10px;
   align-items: center;
   background-color: white;
@@ -39,6 +39,33 @@
   font-size: 20px;
   position: relative;
   font-family: 'Julius Sans One', sans-serif;
+}
+
+.productos-opciones .boton-activo{
+  margin-top: 40px;
+  margin-left: 10px;
+  align-items: center;
+  background-color: white;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #488742;
+  cursor: pointer;
+  display: inline-block;
+  height: 50px;
+  justify-content: space-evenly;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: solid #488742;
+  font-size: 25px;
+  position: relative;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.boton-activo:hover{
+  color: #488742;
 }
 
 .boton::after{
@@ -61,6 +88,7 @@
 .boton:hover{
   color: #488742;
 }
+
 .icono-carrito{
   padding: 30px;
 } 
@@ -69,9 +97,134 @@
   height: 40px
 }
 
+/* CARDS */
 .contenedor-titulo .titulo{
   margin-top: 50px;
   font-family: 'Julius Sans One', sans-serif;
-  height: 150px;
+  height: 100px;
   text-align: center;
+}
+
+.contenedor-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 50px;
+  margin-bottom: 100px;
+}
+
+.card-body .card-titulo{
+  text-align: center;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.card-body .card-text{
+  text-align: center;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.card-body .card-boton{
+  margin-left: 30%;
+
+  border-radius: 10%;
+  align-items: center;
+  background-color: #488742;;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  height: 50px;
+  justify-content: space-evenly;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-top: 15px;
+  padding-right: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Julius Sans One', sans-serif;
+  box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
+}
+
+.card-body .card-boton:hover{
+  background-color: white;
+  color: #488742;
+  border: 1px #488742;
+  box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
+}
+
+/*DETALLES */
+
+.detalles{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  margin-top: 50px;
+  padding: 1%;
+  width: 700px;
+  height: 450px;
+  box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
+}
+
+.card-detalles .card-detalles-img{
+   margin: auto;
+   margin-top: 10px;
+   width: 180px;
+   border-radius: 50%;
+}
+
+.card-detalles .card-detalle-texto{
+  text-align: center;
+  font-family:'Julius Sans One', sans-serif;
+}
+
+.contenedor-contador{
+  width: 200px;
+  height: 400px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  border-radius: 5%;
+}
+
+.contenedor-contador .contador {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 30px;
+}
+
+.contenedor-contador .contador h4{
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.contenedor-contador .contador-boton{
+  align-items: center;
+  background-color: white;
+  border-width: 0;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  height: 50px;
+  justify-content: space-evenly;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Julius Sans One', sans-serif;
+  box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
+  margin-left: 12%
+}
+
+.contador-boton:hover{
+  color: white;
+  background-color: #488742;
+  border: 1px #488742;
+  box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
 }
