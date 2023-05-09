@@ -18,7 +18,7 @@ const productos = [
         "nombre": "MATE CELESTE",
         "precio": 1200,
         "descripcion": "Mate de ceramica moldeado a mano, con detalles en relieve y flores celestes.",
-        "cantidad": 80,
+        "stock": 80,
         "categoria": "mates"
     },
     {
@@ -27,7 +27,7 @@ const productos = [
         "nombre": "MATE LISO",
         "precio": 1200,
         "descripcion": "Mate de ceramica moldeado a mano, con detalles en relieve y flores rosadas.",
-        "cantidad": 50,
+        "stock": 50,
         "categoria": "mates"
     },
     {
@@ -36,7 +36,7 @@ const productos = [
         "nombre": "MATE ROSADO",
         "precio": 1200,
         "descripcion": "Mate de ceramica moldeado a mano, con detalles en relieve y color liso.",
-        "cantidad": 70,
+        "stock": 70,
         "categoria": "mates"
     },
     {
@@ -45,7 +45,7 @@ const productos = [
         "nombre": "ALMOHADON BORDADO",
         "precio": 1500,
         "descripcion": "Almohadon 50cm x 40cm, rayado con apliques sublimados, varios colores.",
-        "cantidad": 15,
+        "stock": 15,
         "categoria": "almohadones"
     },
     {
@@ -54,7 +54,7 @@ const productos = [
         "nombre": "ALMOHADON RAYADO",
         "precio": 1500,
         "descripcion": "Almohadon 50cm x 40cm, rayado con bordes con apliques, varios colores.",
-        "cantidad": 15,
+        "stock": 15,
         "categoria": "almohadones"
     },
     {
@@ -63,7 +63,7 @@ const productos = [
         "nombre": "ALMOHADON CON BORDE",
         "precio": 1500,
         "descripcion": "Almohadon 50cm x 40cm, con apliques, bordados y flecos de broderi.",
-        "cantidad": 15,
+        "stock": 15,
         "categoria": "almohadones"
     },
     {
@@ -72,7 +72,7 @@ const productos = [
         "nombre": "CANASTO TEJIDO",
         "precio": 1600,
         "descripcion": "Canastos de produccion artesanal, armados con paja verde.",
-        "cantidad": 10,
+        "stock": 10,
         "categoria": "canastos"
     },
     {
@@ -81,7 +81,7 @@ const productos = [
         "nombre": "CANASTO BICOLOR",
         "precio": 1600,
         "descripcion": "Canastos de produccion artesanal, armados con paja de dos colores.",
-        "cantidad": 12,
+        "stock": 12,
         "categoria": "canastos"
     },
     {
@@ -90,7 +90,7 @@ const productos = [
         "nombre": "CANASTO TRENZADO",
         "precio": 1600,
         "descripcion": "Canastos de produccion artesanal, armados con paja trenzada.",
-        "cantidad": 10,
+        "stock": 10,
         "categoria": "canastos"
     },
     {
@@ -99,7 +99,7 @@ const productos = [
         "nombre": "CROTON",
         "precio": 1800,
         "descripcion": "Planta croton de tamaño mediano o grande. Se entrega lista para transplantar.",
-        "cantidad": 5,
+        "stock": 5,
         "categoria": "plantas"
     },
     {
@@ -108,7 +108,7 @@ const productos = [
         "nombre": "MONSTERA",
         "precio": 1800,
         "descripcion": "Planta monstera de tamaño mediano o grande. Se entrega lista para transplantar.",
-        "cantidad": 5,
+        "stock": 5,
         "categoria": "plantas"
     },
     {
@@ -117,7 +117,7 @@ const productos = [
         "nombre": "SCHEFFLERA",
         "precio": 1800,
         "descripcion": "Planta schefflera de tamaño mediano o grande. Se entrega lista para transplantar.",
-        "cantidad": 5,
+        "stock": 5,
         "categoria": "plantas"
     }
 ]

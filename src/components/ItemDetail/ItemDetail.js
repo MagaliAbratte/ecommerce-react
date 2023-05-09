@@ -1,8 +1,27 @@
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { ItemCount } from "../ItemCount/ItemCount"
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
+import { useContext } from 'react';
 
-export const ItemDetail = ({img, id, nombre, precio, descripcion, cantidad})=>{
+export const ItemDetail = ({img, id, nombre, precio, descripcion, stock})=>{
+
+    const [cantidadAgregada, setCantidadAgregada] = useState(0)
+
+    const { agregarItem } = useContext (CartContext)
+
+    const agregados = (cantidad) =>{
+      setCantidadAgregada (cantidad)
+
+      const item = {
+        id, nombre, precio
+      }
+
+      agregarItem (item, cantidad)
+    }
+
     return (
     <div className='detalles'>
      <section>
@@ -20,10 +39,16 @@ export const ItemDetail = ({img, id, nombre, precio, descripcion, cantidad})=>{
       </ListGroup>
     </Card>
     </section>
-
-    <section>
-      <ItemCount valorInicial={0} stock={cantidad} agregar={(cantidad)=> console.log ('Cantidad agregada: ', cantidad)}/>
+    <section className='controles'>
+      {
+        cantidadAgregada > 0 ? (
+          <Link to= './cart' className='terminar-boton'>Terminar Compra</Link>
+        ) : (
+          <ItemCount valorInicial={1} stock={stock} agregar={agregados}/>
+        )
+      }
     </section>
     </div>
    )
 }
+
