@@ -42,7 +42,7 @@ export const ItemDetail = ({img, id, nombre, precio, descripcion, stock})=>{
     <section className='controles'>
       {
         cantidadAgregada > 0 ? (
-          <Link to= './cart' className='terminar-boton'>Terminar Compra</Link>
+          <Link to= '/cart' className='terminar-boton'>Terminar Compra</Link>
         ) : (
           <ItemCount valorInicial={1} stock={stock} agregar={agregados}/>
         )
