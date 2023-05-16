@@ -260,27 +260,40 @@
 .carrito{
   height: auto;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  flex-direction: row;
   margin-bottom: 50px;
+  width: 850px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-shadow: 5px 5px 5px 0px rgba(199,197,199,1);
 }
 
 .carrito .titulo{
   text-align: center;
   font-family: 'Julius Sans One', sans-serif;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
-.div-botones{
+.div-carrito1{
   display: flex;
-  flex-direction: row;
-  justify-content:center;
-  gap: 30px;
-  width: 350px;
-  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.div-botones .boton{
+.div-carrito{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: 250px;
+  margin: 0 auto;
+  padding: 5%;
+  background-color: #488742;
+}
+
+.div-carrito .boton{
   margin: 0 auto;
   align-items: center;
   background-color: white;
@@ -302,21 +315,24 @@
   box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
 }
 
+
 .producto-carrito{
-  background-color: grey;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  width: 300px;
-  height: 250px;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 500px;
+  height: 100px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 15px;
+  padding: 2%;
+  border-bottom: 1px solid #488742;;
 }
 
 .producto-carrito h4{
   font-size: 20px;
   font-family: 'Julius Sans One', sans-serif;
   text-align: center;
+  padding: 3%;
 }
 
 .producto-carrito .boton{
@@ -328,7 +344,7 @@
   color: black;
   cursor: pointer;
   height: 50px;
-  width: 150px;
+  width: 50px;
   justify-content: space-evenly;
   padding-left: 10px;
   padding-right: 10px;
@@ -336,6 +352,29 @@
   font-family: 'Julius Sans One', sans-serif;
   text-align: center;
   box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
+}
+
+.carrito-vacio{
+  width: 500px;
+  height: 250px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  box-shadow: 5px 5px 5px 0px rgba(199,197,199,1);
+}
+
+.carrito-vacio h3{
+  padding: 5%;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.carrito-vacio .carrito-vacio-link{
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 1.5rem;
+  margin-left: 35%
+
 }
 
 

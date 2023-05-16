@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react'
-import { obtenerCategoria, obtenerProductos } from '../../asyncMock'
+/* import { obtenerCategoria, obtenerProductos } from '../../asyncMock' */
 import { ItemList } from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
+
+import { getDocs, collection, query, where } from 'firebase/firestore'
+import { db } from '../../services/firebase/firebaseConfig'
 
 export const ItemListContainer = ({ greeting }) =>{
 
@@ -9,7 +12,23 @@ export const ItemListContainer = ({ greeting }) =>{
     const { categoriaId } = useParams ()
 
     useEffect(() => {
-      const asyncFunc = categoriaId ? obtenerCategoria : obtenerProductos
+      const collectionRef = categoriaId
+      ? query (collection(db, 'productos'), where('categoria', '==', categoriaId))
+      : collection (db, 'productos')
+
+      getDocs (collectionRef)
+      .then (response => {
+        const productAdapted = response.docs.map(doc =>{
+          const data = doc.data()
+          return { id: doc.id, ...data }
+        })
+        setProductos (productAdapted)
+      })
+      .catch (error =>{
+        console.log(error);
+      })
+
+      /* const asyncFunc = categoriaId ? obtenerCategoria : obtenerProductos
 
       asyncFunc(categoriaId)
       .then (response =>{
@@ -17,7 +36,7 @@ export const ItemListContainer = ({ greeting }) =>{
       }) 
       .catch (error =>{
         console.error (error)
-      })
+      }) */
     }, [categoriaId])
     
 

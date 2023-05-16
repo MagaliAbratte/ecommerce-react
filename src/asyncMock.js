@@ -1,4 +1,4 @@
-import mates1 from "./components/Item/assets/mate1.jpg"
+/* import mates1 from "./components/Item/assets/mate1.jpg"
 import mates2 from "./components/Item/assets/mates2.jpg"
 import mates3 from "./components/Item/assets/mates3.jpg"
 import almohadon1 from "./components/Item/assets/almohadon1.jpg"
@@ -9,7 +9,7 @@ import canastos2 from "./components/Item/assets/canastos2.jpg"
 import canastos3 from "./components/Item/assets/canastos3.jpg"
 import planta1 from "./components/Item/assets/croton.jpg"
 import planta2 from "./components/Item/assets/monstera.jpg"
-import planta3 from "./components/Item/assets/schefflera.jpg"
+import planta3 from "./components/Item/assets/schefflera.jpg" */
 
 const productos = [
     {

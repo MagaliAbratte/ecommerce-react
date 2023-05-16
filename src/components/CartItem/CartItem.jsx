@@ -10,9 +10,9 @@ export const CartItem = ({nombre, precio, cantidad, id}) => {
     <div>
       <section className='producto-carrito'>
         <h4>{nombre}</h4>
-        <h4>Precio por unidad: ${precio}</h4>
+        <h4>${precio}</h4>
         <h4>{cantidad}</h4>
-        <button onClick={()=> eliminarItem(id)} className='boton'>Eliminar producto</button>
+        <button onClick={()=> eliminarItem(id)} className='boton'>X</button>
       </section>
     </div>
   )
