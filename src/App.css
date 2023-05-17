@@ -1,10 +1,16 @@
+/* COLORES */
+/* #05006B AZUL */
+/* #D2CFD4 GRIS */
+
+/* LETRAS */
+
 /* NAV BAR */
 .contenedor-navbar .flex-navbar{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  height: 120px;
+  height: 110px;
   box-shadow: 0px 7px 13px 0px rgba(219,219,219,1);
 }
 
@@ -45,10 +51,9 @@
   margin-top: 40px;
   margin-left: 10px;
   align-items: center;
-  background-color: white;
   border-width: 0;
   box-sizing: border-box;
-  color: #488742;
+  color: #001A40;
   cursor: pointer;
   display: inline-block;
   height: 50px;
@@ -58,14 +63,19 @@
   overflow: hidden;
   padding-left: 10px;
   padding-right: 10px;
-  text-decoration: solid #488742;
+  text-decoration: solid #05006B;
   font-size: 25px;
+  font-weight: bold;
   position: relative;
   font-family: 'Julius Sans One', sans-serif;
 }
 
 .boton-activo:hover{
-  color: #488742;
+  color: #05006B;
+}
+
+.boton:hover{
+  color: #D2CFD4
 }
 
 .boton::after{
@@ -75,7 +85,7 @@
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: #488742;
+  background-color:#D2CFD4;
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.4s ease-out;
@@ -85,12 +95,12 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-.boton:hover{
-  color: #488742;
-}
 
 .icono-carrito{
   padding: 30px;
+  color: black;
+  font-size: 1.5rem;
+  text-decoration: none;
 } 
 
 .icono-carrito img{
@@ -114,23 +124,17 @@
   margin-bottom: 100px;
 }
 
-.card-body .card-titulo{
-  text-align: center;
-  font-family: 'Julius Sans One', sans-serif;
-}
-
 .card-body .card-text{
   text-align: center;
   font-family: 'Julius Sans One', sans-serif;
 }
 
 .card-body .card-boton{
-  margin-left: 30%;
-  border-radius: 10%;
-  align-items: center;
-  background-color: #488742;;
+  margin-left: 25%;
+  border-radius: 15px;
+  background-color: #001A40;
   box-sizing: border-box;
-  color: black;
+  color: white;
   cursor: pointer;
   display: inline-block;
   height: 50px;
@@ -148,20 +152,35 @@
 }
 
 .card-body .card-boton:hover{
-  background-color: white;
-  color: #488742;
-  border: 1px #488742;
+  background-color:#D2CFD4;
+  color: #001A40;
+  border: 1px #001A40;
   box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
 }
 
+.spinner{
+  margin-left: 49%;
+  margin-top: 20%;
+  height: 500px;
+}
+
 /*DETALLES */
+.controles{
+  width: 250px;
+}
+
+.detalles-container{
+  height: 500px;
+}
 
 .detalles{
+  background-color: #001A40;
+  border-radius: 15px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 20px;
   padding: 1%;
   width: 700px;
   height: 450px;
@@ -170,8 +189,8 @@
 
 .card-detalles .card-detalles-img{
    margin: auto;
-   margin-top: 10px;
-   width: 180px;
+   margin-top: 40px;
+   width: 200px;
    border-radius: 50%;
 }
 
@@ -181,33 +200,45 @@
 }
 
 .contenedor-contador{
-  width: 200px;
+  width: 250px;
   height: 400px;
-  margin-top: 100px;
   margin-bottom: 50px;
   border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
 }
 
 .contenedor-contador .contador {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  padding: 30px;
+  justify-content: center;
+  gap: 15px;
+}
+
+.contador .contador-btn{
+  background-color: white;
+  border-radius: 50%;
+  width: 50px;
+  font-size: 1.8rem;
 }
 
 .contenedor-contador .contador h4{
   font-family: 'Julius Sans One', sans-serif;
+  color: white;
+  font-size: 2.2rem;
 }
 
 .contenedor-contador .contador-boton{
-  align-items: center;
-  background-color: white;
-  border-width: 0;
+  margin-left: 10%;
+  border-radius: 15px;
+  background-color:white;
   box-sizing: border-box;
-  color: black;
+  color:#001A40;
   cursor: pointer;
   display: inline-block;
-  height: 50px;
+  height: 60px;
   justify-content: space-evenly;
   line-height: 1;
   list-style: none;
@@ -215,50 +246,40 @@
   padding-left: 10px;
   padding-right: 10px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.5rem;
   font-family: 'Julius Sans One', sans-serif;
-  box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
-  margin-left: 15%
 }
 
 .contador-boton:hover{
-  color: white;
-  background-color: #488742;
-  border: 1px #488742;
-  box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
-}
-
-.controles{
-  width: 200px;
+  color:#001A40;
+  background-color: white;
 }
 
 .controles .terminar-boton{
-  align-items: center;
-  background-color: white;
-  border-width: 0;
+  margin-top: 40%;
+  margin-left: 18%;
+  border-radius: 15px;
+  background-color:white;
   box-sizing: border-box;
-  color: black;
+  color:#001A40;
   cursor: pointer;
   display: inline-block;
   height: 50px;
-  width: 150px;
+  width: 220px;
   justify-content: space-evenly;
   line-height: 1;
   list-style: none;
   overflow: hidden;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding-top: 12px;
   padding-left: 10px;
   padding-right: 10px;
-  text-decoration: none;
-  font-size: 20px;
   font-family: 'Julius Sans One', sans-serif;
-  text-align: center;
-  box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
-  margin-left: 10%;
-  margin-top: 80%;
 }
 
+/* CARRITO */
 .carrito{
-  height: auto;
   display: flex;
   flex-direction: row;
   margin-bottom: 50px;
@@ -267,6 +288,7 @@
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 50px;
+  border-radius: 15px;
   box-shadow: 5px 5px 5px 0px rgba(199,197,199,1);
 }
 
@@ -274,6 +296,7 @@
   text-align: center;
   font-family: 'Julius Sans One', sans-serif;
   margin-top: 10px;
+  color: white;
 }
 
 .div-carrito1{
@@ -290,42 +313,54 @@
   width: 250px;
   margin: 0 auto;
   padding: 5%;
-  background-color: #488742;
+  background-color:#001A40;
 }
 
-.div-carrito .boton{
-  margin: 0 auto;
-  align-items: center;
+.div-carrito .boton-carrito{
+  border-radius: 15px;
   background-color: white;
-  border-width: 0;
   box-sizing: border-box;
-  color: black;
+  color:#001A40;
   cursor: pointer;
+  display: inline-block;
   height: 50px;
-  width: 150px;
+  justify-content: space-evenly;
   line-height: 1;
   list-style: none;
   overflow: hidden;
-  padding-left: 10px;
-  padding-right: 10px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.1rem;
   font-family: 'Julius Sans One', sans-serif;
-  text-align: center;
-  box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
 }
-
+.div-carrito .boton-carrito1{
+  border-radius: 15px;
+  background-color: white;
+  box-sizing: border-box;
+  color:#001A40;
+  cursor: pointer;
+  display: inline-block;
+  height: 50px;
+  justify-content: space-evenly;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding-top: 15px;
+  padding-left: 3px;
+  font-family: 'Julius Sans One', sans-serif;
+}
 
 .producto-carrito{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 500px;
   height: 100px;
   margin: 0 auto;
   margin-top: 15px;
   padding: 2%;
-  border-bottom: 1px solid #488742;;
+  border-bottom: 2px solid #001A40;
 }
 
 .producto-carrito h4{
@@ -333,6 +368,7 @@
   font-family: 'Julius Sans One', sans-serif;
   text-align: center;
   padding: 3%;
+  width: 130px;
 }
 
 .producto-carrito .boton{
@@ -351,6 +387,7 @@
   font-size: 20px;
   font-family: 'Julius Sans One', sans-serif;
   text-align: center;
+  border-radius: 15px;
   box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
 }
 
@@ -374,12 +411,79 @@
   font-family: 'Julius Sans One', sans-serif;
   font-size: 1.5rem;
   margin-left: 35%
+}
 
+/* FORM */
+.form-checkout{
+  width: 500px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  margin-top: 80px;
+  background-color: #001A40;
+  border-radius: 15px;
+  padding: 2%;
+}
+
+.form-checkout .checkout{
+  font-family:'Julius Sans One', sans-serif;
+  text-align: center;
+  color: white;
+}
+
+.form-checkout .form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form label{
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+}
+
+.form .form-boton{
+  margin-left: 30%;
+  align-items: center;
+  background-color: white;
+  border-width: 0;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  height: 50px;
+  width: 200px;
+  justify-content: space-evenly;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  font-family: 'Julius Sans One', sans-serif;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.form p{
+  color: white;
+}
+
+.container-final{
+  width: 500px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  margin-top: 80px;
+  background-color: #001A40;
+  border-radius: 15px;
+  padding: 2%;
+}
+
+.container-final p{
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 
 /* FOOTER */
-
 .footer{
   display: flex;
   flex-direction: row;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from "react"
 
 export const CheckoutForm = ({onConfirm}) => {
     const [nombre, setNombre] = useState('')
@@ -17,36 +17,39 @@ export const CheckoutForm = ({onConfirm}) => {
 
   return (
     <div>
-        <form onSubmit={handleConfirm}>
+        <form onSubmit={handleConfirm} className="form">
             <label>
-                Nombre:
+                Nombre*
             </label>
             <input 
-            type="text" 
+            type='text'
             value={nombre} 
             onChange={({target}) => setNombre(target.value)}
+            required
             />
 
             <label>
-                Telefono:
+                Telefono*
             </label>
             <input 
-            type="text" 
+            type='text' 
             value={telefono} 
             onChange={({target}) => setTelefono(target.value)}
+            required
             />
 
             <label>
-                Email:
+                Email*
             </label>
             <input 
-            type="text" 
+            type='email' 
             value={email} 
             onChange={({target}) => setEmail(target.value)}
+            required
             />
-
+            <p>* campo obligatorio</p>
             <div>
-                <button type='submit'>Crear Orden</button>
+                <button type='submit' className="form-boton">Crear Orden</button>
             </div>
         </form>
     </div>

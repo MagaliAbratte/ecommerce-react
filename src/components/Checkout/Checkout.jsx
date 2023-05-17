@@ -2,7 +2,8 @@ import React, { useContext, useState } from 'react'
 import { db } from '../../services/firebase/firebaseConfig'
 import { CheckoutForm } from '../CheckoutForm/CheckoutForm'
 import { CartContext } from '../../context/CartContext'
-import { Timestamp, addDoc, collection, documentId, getDoc, getDocs, query, writeBatch, where } from 'firebase/firestore'
+import { Timestamp, addDoc, collection, documentId, getDocs, query, writeBatch, where } from 'firebase/firestore'
+import Spinner from 'react-bootstrap/Spinner';
 
 export const Checkout = () => {
     const [loading, setLoading] = useState(false)
@@ -15,11 +16,9 @@ export const Checkout = () => {
 
         try{
             const objOrder = {
-                buyer: {
-                    nombre, telefono, email
-                },
+                buyer: {nombre, telefono, email},
                 items: cart,
-                total: cartTotal,
+                total: cartTotal(),
                 date: Timestamp.fromDate(new Date())
             }
 
@@ -27,7 +26,7 @@ export const Checkout = () => {
             const outOfStock = []
             const ids = cart.map (prod => prod.id)
             const productsRef = collection (db, 'productos')
-            const productsAddedFromFirestore = await getDocs (query(productsRef, where (documentId(), 'in', )))
+            const productsAddedFromFirestore = await getDocs (query(productsRef, where (documentId(), 'in', ids))) 
             const { docs } = productsAddedFromFirestore
 
             docs.forEach (doc =>{
@@ -62,16 +61,26 @@ export const Checkout = () => {
     }
 
     if (loading){
-        return <h2>Se esta generando su orden...</h2>
+        return (
+            <div className='spinner'>
+              <Spinner animation="border" />;
+            </div>
+          )
     }
 
     if (orderId){
-        return <h2>El ID de su orden es {orderId}</h2>
+        return (
+            <div className='container-final'>
+                <p>¡Gracias por su compra!</p>
+                <p>En las siguientes 72 hs recibira informacion sobre la misma en su correo electronico.</p>
+                <p>El codigo de su orden es: {orderId}</p>
+            </div> 
+        )
     }
 
   return (
-    <div>
-        <h2>Checkout</h2>
+    <div className='form-checkout'>
+        <h2 className='checkout'>Checkout</h2>
         <CheckoutForm onConfirm={createOrder}/>
     </div>
   )

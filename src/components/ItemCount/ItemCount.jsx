@@ -17,14 +17,14 @@ const decrementar = () =>{
 }
 
 return (
-    <div className="contenedor-contador">
+    <div className='contenedor-contador'>
         <div className="contador">
-          <button onClick={incrementar} className="contador-boton">+1</button>
+          <button onClick={incrementar} className='contador-btn'>+</button>
           <h4>{cantidad}</h4>
-          <button onClick={decrementar} className="contador-boton">-1</button>
+          <button onClick={decrementar} className='contador-btn'>-</button>
         </div>
         <div>
-          <button className="contador-boton" onClick={()=> agregar(cantidad)} disabled= {!stock}>
+          <button className='contador-boton' onClick={()=> agregar(cantidad)} disabled= {!stock}>
             Agregar al carrito
           </button>
         </div>

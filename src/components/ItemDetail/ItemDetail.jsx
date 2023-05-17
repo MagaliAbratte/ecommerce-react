@@ -26,15 +26,14 @@ export const ItemDetail = ({img, id, nombre, precio, descripcion, stock})=>{
     <div className='detalles'>
      <section>
       <Card style={{ width: '20rem'}} className='card-detalles'>
-      <Card.Img variant="top" src={img} className='card-detalles-img'/>
+      <Card.Img variant='top' src={img} className='card-detalles-img'/>
       <Card.Body>
-        <Card.Title className='card-detalle-texto'>{id}</Card.Title>
         <Card.Title className='card-detalle-texto'>{nombre}</Card.Title>
         <Card.Text className='card-detalle-texto'>
           {descripcion}
         </Card.Text>
       </Card.Body>
-      <ListGroup className="list-group-flush">
+      <ListGroup className='list-group-flush'>
         <ListGroup.Item className='card-detalle-texto'>${precio}</ListGroup.Item>
       </ListGroup>
     </Card>
@@ -42,7 +41,10 @@ export const ItemDetail = ({img, id, nombre, precio, descripcion, stock})=>{
     <section className='controles'>
       {
         cantidadAgregada > 0 ? (
+          <div>
+          <Link to= '/' className='terminar-boton'>Seguir comprando</Link>
           <Link to= '/cart' className='terminar-boton'>Terminar Compra</Link>
+          </div>
         ) : (
           <ItemCount valorInicial={1} stock={stock} agregar={agregados}/>
         )

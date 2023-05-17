@@ -16,7 +16,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
       <CartProvider>
        <NavBar />
        <Routes>
-        <Route path='/' element={<ItemListContainer greeting= {"Bienvenidos a Estudio Crea"}/>}/>
+        <Route path='/' element={<ItemListContainer greeting= {'Estudio Crea & Decoracion'}/>}/>
         <Route path='/categoria/:categoriaId' element= {<ItemListContainer />}/>
         <Route path='/item/:itemId' element= {<ItemDetailContainer />} />
         <Route path='/cart' element= {<Cart />}/>
