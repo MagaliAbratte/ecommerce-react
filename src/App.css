@@ -1,8 +1,10 @@
-/* COLORES */
-/* #05006B AZUL */
-/* #D2CFD4 GRIS */
-
-/* LETRAS */
+body {
+  margin:0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 50px);
+}
 
 /* NAV BAR */
 .contenedor-navbar .flex-navbar{
@@ -44,7 +46,7 @@
   text-decoration: none;
   font-size: 20px;
   position: relative;
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Poppins', sans-serif, thin;
 }
 
 .productos-opciones .boton-activo{
@@ -67,7 +69,7 @@
   font-size: 25px;
   font-weight: bold;
   position: relative;
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Poppins', sans-serif, light;
 }
 
 .boton-activo:hover{
@@ -110,7 +112,7 @@
 /* CARDS */
 .contenedor-titulo .titulo{
   margin-top: 50px;
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Poppins', sans-serif;
   height: 100px;
   text-align: center;
 }
@@ -126,11 +128,11 @@
 
 .card-body .card-text{
   text-align: center;
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .card-body .card-boton{
-  margin-left: 25%;
+  margin-left: 30%;
   border-radius: 15px;
   background-color: #001A40;
   box-sizing: border-box;
@@ -147,7 +149,7 @@
   padding-right: 10px;
   text-decoration: none;
   font-size: 20px;
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Sintony', sans-serif;
   box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
 }
 
@@ -170,11 +172,11 @@
 }
 
 .detalles-container{
-  height: 500px;
+  min-height: calc(100vh - 50px);
 }
 
 .detalles{
-  background-color: #001A40;
+  background-color: white;
   border-radius: 15px;
   display: flex;
   flex-direction: row;
@@ -196,7 +198,7 @@
 
 .card-detalles .card-detalle-texto{
   text-align: center;
-  font-family:'Julius Sans One', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .contenedor-contador{
@@ -218,64 +220,80 @@
 }
 
 .contador .contador-btn{
-  background-color: white;
+  background-color:#D2CFD4;
   border-radius: 50%;
   width: 50px;
   font-size: 1.8rem;
 }
 
 .contenedor-contador .contador h4{
-  font-family: 'Julius Sans One', sans-serif;
-  color: white;
+  font-family: 'Sintony', sans-serif;
+  color:#001A40;
   font-size: 2.2rem;
 }
 
 .contenedor-contador .contador-boton{
   margin-left: 10%;
   border-radius: 15px;
-  background-color:white;
+  background-color: #001A40;
   box-sizing: border-box;
-  color:#001A40;
-  cursor: pointer;
-  display: inline-block;
-  height: 60px;
-  justify-content: space-evenly;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  padding-left: 10px;
-  padding-right: 10px;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-family: 'Julius Sans One', sans-serif;
-}
-
-.contador-boton:hover{
-  color:#001A40;
-  background-color: white;
-}
-
-.controles .terminar-boton{
-  margin-top: 40%;
-  margin-left: 18%;
-  border-radius: 15px;
-  background-color:white;
-  box-sizing: border-box;
-  color:#001A40;
+  color: white;
   cursor: pointer;
   display: inline-block;
   height: 50px;
-  width: 220px;
   justify-content: space-evenly;
   line-height: 1;
   list-style: none;
   overflow: hidden;
-  text-decoration: none;
-  font-size: 1.2rem;
-  padding-top: 12px;
   padding-left: 10px;
   padding-right: 10px;
-  font-family: 'Julius Sans One', sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Sintony', sans-serif;
+  box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
+}
+
+.contador-boton:hover{
+  background-color:#D2CFD4;
+  color: #001A40;
+  border: 1px #001A40;
+  box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
+}
+
+.controles-botones{
+  margin-top: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+.controles-botones .terminar-boton{
+  margin-left: 5%;
+  border-radius: 15px;
+  background-color: #001A40;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  height: 50px;
+  justify-content: space-evenly;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-top: 15px;
+  padding-left: 30px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Sintony', sans-serif;
+  box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
+}
+
+.terminar-boton:hover{
+  background-color:#D2CFD4;
+  color: #001A40;
+  border: 1px #001A40;
+  box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
 }
 
 /* CARRITO */
@@ -287,14 +305,14 @@
   height: auto;
   margin: 0 auto;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 300px;
   border-radius: 15px;
   box-shadow: 5px 5px 5px 0px rgba(199,197,199,1);
 }
 
 .carrito .titulo{
   text-align: center;
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin-top: 10px;
   color: white;
 }
@@ -330,8 +348,16 @@
   overflow: hidden;
   text-decoration: none;
   font-size: 1.1rem;
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Sintony', sans-serif;
 }
+
+.boton-carrito:hover{
+  background-color:#D2CFD4;
+  color: #001A40;
+  border: 1px #001A40;
+  box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
+}
+
 .div-carrito .boton-carrito1{
   border-radius: 15px;
   background-color: white;
@@ -347,8 +373,15 @@
   text-decoration: none;
   font-size: 1.1rem;
   padding-top: 15px;
-  padding-left: 3px;
-  font-family: 'Julius Sans One', sans-serif;
+  padding-left: 10px;
+  font-family: 'Sintony', sans-serif;
+}
+
+.boton-carrito1:hover{
+  background-color:#D2CFD4;
+  color: #001A40;
+  border: 1px #001A40;
+  box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
 }
 
 .producto-carrito{
@@ -365,16 +398,16 @@
 
 .producto-carrito h4{
   font-size: 20px;
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
   padding: 3%;
   width: 130px;
 }
 
-.producto-carrito .boton{
+.producto-carrito .boton-carrito2{
   margin: 0 auto;
   align-items: center;
-  background-color: white;
+  background-color:#D2CFD4;
   border-width: 0;
   box-sizing: border-box;
   color: black;
@@ -385,32 +418,56 @@
   padding-left: 10px;
   padding-right: 10px;
   font-size: 20px;
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
   border-radius: 15px;
   box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
 }
 
 .carrito-vacio{
+  border-radius: 15px;
   width: 500px;
   height: 250px;
   margin: 0 auto;
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 300px;
   box-shadow: 5px 5px 5px 0px rgba(199,197,199,1);
 }
 
 .carrito-vacio h3{
   padding: 5%;
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.5rem;
   text-align: center;
 }
 
 .carrito-vacio .carrito-vacio-link{
-  font-family: 'Julius Sans One', sans-serif;
-  font-size: 1.5rem;
-  margin-left: 35%
+  margin-left: 38%;
+  border-radius: 15px;
+  background-color: #001A40;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  height: 50px;
+  justify-content: space-evenly;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
+}
+
+.carrito-vacio-link:hover{
+  background-color:#D2CFD4;
+  color: #001A40;
+  border: 1px #001A40;
+  box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
 }
 
 /* FORM */
@@ -426,7 +483,7 @@
 }
 
 .form-checkout .checkout{
-  font-family:'Julius Sans One', sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
   color: white;
 }
@@ -438,7 +495,7 @@
 }
 
 .form label{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Poppins', sans-serif;
   color: white;
 }
 
@@ -448,7 +505,7 @@
   background-color: white;
   border-width: 0;
   box-sizing: border-box;
-  color: black;
+  color:#001A40;
   cursor: pointer;
   height: 50px;
   width: 200px;
@@ -456,9 +513,18 @@
   padding-left: 10px;
   padding-right: 10px;
   font-size: 20px;
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Sintony', sans-serif;
   text-align: center;
   border-radius: 15px;
+  border: 1px #001A40;
+  box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
+}
+
+.form-boton:hover{
+  background-color: #D2CFD4;
+  color: #001A40;
+  border: 1px #001A40;
+  box-shadow: 0px 3px 5px 0px rgba(173,168,173,1);
 }
 
 .form p{
@@ -467,19 +533,29 @@
 
 .container-final{
   width: 500px;
-  height: auto;
+  height: 250px;
   margin: 0 auto;
-  margin-bottom: 80px;
+  margin-bottom: 300px;
   margin-top: 80px;
   background-color: #001A40;
   border-radius: 15px;
   padding: 2%;
 }
 
+.container-final h3{
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+}
+
 .container-final p{
   color: white;
   text-align: center;
   font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
 }
 
 
@@ -492,12 +568,14 @@
   margin: auto;
   width: 100%;
   box-shadow: 1px -3px 17px 0px rgba(184,173,184,1);
+  bottom: 0;
 }
 
 .footer p{
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Sintony', sans-serif;
   margin: 10px;
   margin-top: 25px;
+  color: #001A40;
 }
 
 .footer img{

@@ -1,4 +1,5 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { NavBar } from './components/NavBar/NavBar';
 import { Footer } from './components/Footer/Footer';
@@ -7,7 +8,6 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import { Cart } from './components/Cart/Cart';
 import { Checkout } from './components/Checkout/Checkout';
 import { CartProvider } from './context/CartContext';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
  export function App () {
   return (
@@ -16,7 +16,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
       <CartProvider>
        <NavBar />
        <Routes>
-        <Route path='/' element={<ItemListContainer greeting= {'Estudio Crea & Decoracion'}/>}/>
+        <Route path='/' element={<ItemListContainer greeting= {'ESTUDIO CREA & Decoracion'}/>}/>
         <Route path='/categoria/:categoriaId' element= {<ItemListContainer />}/>
         <Route path='/item/:itemId' element= {<ItemDetailContainer />} />
         <Route path='/cart' element= {<Cart />}/>

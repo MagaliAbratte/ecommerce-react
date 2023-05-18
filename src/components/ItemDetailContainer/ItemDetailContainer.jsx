@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react"
-/* import { obtenerProductoById } from "../../asyncMock" */
 import { ItemDetail } from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom"
-import Spinner from 'react-bootstrap/Spinner';
-
 import { getDoc, doc } from "firebase/firestore"
 import { db } from "../../services/firebase/firebaseConfig"
+import Spinner from 'react-bootstrap/Spinner';
 
 export const ItemDetailContainer = () =>{
     const [producto, setProducto] = useState(null)

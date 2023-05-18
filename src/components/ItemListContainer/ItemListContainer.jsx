@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react'
-/* import { obtenerCategoria, obtenerProductos } from '../../asyncMock' */
 import { ItemList } from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
-import Spinner from 'react-bootstrap/Spinner';
-
 import { getDocs, collection, query, where } from 'firebase/firestore'
 import { db } from '../../services/firebase/firebaseConfig'
+import Spinner from 'react-bootstrap/Spinner';
 
 export const ItemListContainer = ({ greeting }) =>{
 

@@ -41,7 +41,7 @@ export const ItemDetail = ({img, id, nombre, precio, descripcion, stock})=>{
     <section className='controles'>
       {
         cantidadAgregada > 0 ? (
-          <div>
+          <div className='controles-botones'>
           <Link to= '/' className='terminar-boton'>Seguir comprando</Link>
           <Link to= '/cart' className='terminar-boton'>Terminar Compra</Link>
           </div>

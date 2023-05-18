@@ -1,4 +1,3 @@
-import React from 'react'
 import instagram from './assets/instagram.png'
 import whatsapp from './assets/whatsapp.png'
 

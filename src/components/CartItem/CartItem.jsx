@@ -1,4 +1,3 @@
-import React from 'react'
 import { CartContext } from '../../context/CartContext'
 import { useContext } from 'react'
 
@@ -12,7 +11,7 @@ export const CartItem = ({nombre, precio, cantidad, id}) => {
         <h4>{nombre}</h4>
         <h4>${precio}</h4>
         <h4>{cantidad}</h4>
-        <button onClick={()=> eliminarItem(id)} className='boton'>X</button>
+        <button onClick={()=> eliminarItem(id)} className='boton-carrito2'>X</button>
       </section>
     </div>
   )

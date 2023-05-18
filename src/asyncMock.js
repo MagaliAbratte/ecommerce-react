@@ -1,15 +1,4 @@
-/* import mates1 from "./components/Item/assets/mate1.jpg"
-import mates2 from "./components/Item/assets/mates2.jpg"
-import mates3 from "./components/Item/assets/mates3.jpg"
-import almohadon1 from "./components/Item/assets/almohadon1.jpg"
-import almohadon2 from "./components/Item/assets/almohadon2.jpg"
-import almohadon3 from "./components/Item/assets/almohadon3.jpg"
-import canastos1 from "./components/Item/assets/canastos1.jpg"
-import canastos2 from "./components/Item/assets/canastos2.jpg"
-import canastos3 from "./components/Item/assets/canastos3.jpg"
-import planta1 from "./components/Item/assets/croton.jpg"
-import planta2 from "./components/Item/assets/monstera.jpg"
-import planta3 from "./components/Item/assets/schefflera.jpg" */
+/* ASYNC MOCK REEMPLAZADO POR FIRESTORE/FIREBASE */
 
 const productos = [
     {

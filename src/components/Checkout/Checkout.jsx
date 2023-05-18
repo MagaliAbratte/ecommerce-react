@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 import { db } from '../../services/firebase/firebaseConfig'
 import { CheckoutForm } from '../CheckoutForm/CheckoutForm'
 import { CartContext } from '../../context/CartContext'
@@ -11,12 +11,12 @@ export const Checkout = () => {
 
     const {cart, cartTotal, limpiarCarrito} = useContext (CartContext)
 
-    const createOrder = async ({nombre, telefono, email}) =>{
+    const createOrder = async ({nombre, apellido, telefono, email}) =>{
         setLoading (true)
 
         try{
             const objOrder = {
-                buyer: {nombre, telefono, email},
+                buyer: {nombre, apellido, telefono, email},
                 items: cart,
                 total: cartTotal(),
                 date: Timestamp.fromDate(new Date())
@@ -71,7 +71,7 @@ export const Checkout = () => {
     if (orderId){
         return (
             <div className='container-final'>
-                <p>¡Gracias por su compra!</p>
+                <h3>¡Gracias por su compra!</h3>
                 <p>En las siguientes 72 hs recibira informacion sobre la misma en su correo electronico.</p>
                 <p>El codigo de su orden es: {orderId}</p>
             </div> 
@@ -80,7 +80,7 @@ export const Checkout = () => {
 
   return (
     <div className='form-checkout'>
-        <h2 className='checkout'>Checkout</h2>
+        <h2 className='checkout'>Orden de compra</h2>
         <CheckoutForm onConfirm={createOrder}/>
     </div>
   )

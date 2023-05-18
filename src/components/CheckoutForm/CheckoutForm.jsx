@@ -2,6 +2,7 @@ import { useState } from "react"
 
 export const CheckoutForm = ({onConfirm}) => {
     const [nombre, setNombre] = useState('')
+    const [apellido, setApellido] = useState('')
     const [telefono, setTelefono] = useState('')
     const [email, setEmail] = useState('')
 
@@ -9,7 +10,7 @@ export const CheckoutForm = ({onConfirm}) => {
         e.preventDefault ()
 
         const userData = {
-            nombre, telefono, email
+            nombre, apellido, telefono, email
         }
 
         onConfirm (userData)
@@ -25,6 +26,16 @@ export const CheckoutForm = ({onConfirm}) => {
             type='text'
             value={nombre} 
             onChange={({target}) => setNombre(target.value)}
+            required
+            />
+
+            <label>
+                Apellido*
+            </label>
+            <input 
+            type='text'
+            value={apellido} 
+            onChange={({target}) => setApellido(target.value)}
             required
             />
 
