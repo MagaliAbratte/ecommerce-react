@@ -13,7 +13,7 @@ Al generar una orden de compra, mediante un formulario se solicita al usuario da
 
 #REQUISITOS E INSTALACION:
 
-- LIBRERIAS, FRAMEWORKS Y DEPENDENCIAS, con sus versiones:
+LIBRERIAS, FRAMEWORKS Y DEPENDENCIAS, con sus versiones:
  - "node.js" v18.15.0, 
  - "react": "^18.2.0", 
  - "react-dom": "^18.2.0", 
@@ -22,7 +22,7 @@ Al generar una orden de compra, mediante un formulario se solicita al usuario da
  - "react-bootstrap": "^2.7.4", 
  - "firebase": "^9.22.0".
  
- - COMANDOS:
+COMANDOS:
   - Crear una nueva app React: npx create-react-app name, 
   - Develope mode: npm start, 
   - React router dom: npm install react-router-dom, 
