@@ -5,14 +5,20 @@ export const CheckoutForm = ({onConfirm}) => {
     const [apellido, setApellido] = useState('')
     const [telefono, setTelefono] = useState('')
     const [email, setEmail] = useState('')
+    const [confirmarEmail, setConfirmarEmail] = useState('')
+    const [error,setError] = useState('');
 
     const handleConfirm = (e) =>{
         e.preventDefault ()
 
+        if (email !== confirmarEmail){
+            setError ('Por favor, verifica que los emails ingresados sean iguales')
+            return;
+        }
+
         const userData = {
             nombre, apellido, telefono, email
         }
-
         onConfirm (userData)
     }
 
@@ -58,7 +64,19 @@ export const CheckoutForm = ({onConfirm}) => {
             onChange={({target}) => setEmail(target.value)}
             required
             />
+
+            <label>
+               Confirmar Email*
+            </label>
+            <input 
+            type='email' 
+            value={confirmarEmail} 
+            onChange={({target}) => setConfirmarEmail(target.value)}
+            required
+            />
             <p>* campo obligatorio</p>
+            {error && <p>{error}</p>}
+
             <div>
                 <button type='submit' className="form-boton">Crear Orden</button>
             </div>
